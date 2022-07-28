@@ -70,62 +70,61 @@ const navigation = {
           items: [
             { name: 'Bows', href: '#' },
             { name: 'Arrows', href: '#' },
+            { name: 'Browse All', href: '#' },
           ],
         },
       ],
     },
     {
-      id: 'men',
-      name: 'Men',
+      id: 'armor',
+      name: 'Armor',
       featured: [
         {
           name: 'New Arrivals',
           href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg',
+          imageSrc: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/9/98/BotW_Champion%27s_Tunic_Icon.png',
           imageAlt: 'Drawstring top with elastic loop closure and textured interior padding.',
         },
         {
-          name: 'Artwork Tees',
+          name: 'Best Rated',
           href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg',
+          imageSrc: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/2/2b/BotW_Tunic_of_Time_Icon.png',
           imageAlt:
             'Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.',
         },
       ],
       sections: [
         {
-          id: 'clothing',
-          name: 'Clothing',
+          id: 'body gear',
+          name: 'Body Gear',
           items: [
-            { name: 'Tops', href: '#' },
-            { name: 'Pants', href: '#' },
-            { name: 'Sweaters', href: '#' },
-            { name: 'T-Shirts', href: '#' },
-            { name: 'Jackets', href: '#' },
-            { name: 'Activewear', href: '#' },
+            { name: 'Armor', href: '#' },
+            { name: 'Tunics', href: '#' },
+            { name: 'Shirts', href: '#' },
+            { name: 'Other', href: '#' },
             { name: 'Browse All', href: '#' },
           ],
         },
         {
-          id: 'accessories',
-          name: 'Accessories',
+          id: 'leg gear',
+          name: 'Leg Gear',
           items: [
-            { name: 'Watches', href: '#' },
-            { name: 'Wallets', href: '#' },
-            { name: 'Bags', href: '#' },
-            { name: 'Sunglasses', href: '#' },
-            { name: 'Hats', href: '#' },
-            { name: 'Belts', href: '#' },
+            { name: 'Greaves', href: '#' },
+            { name: 'Trousers', href: '#' },
+            { name: 'Boots', href: '#' },
+            { name: 'Browse All', href: '#' },
           ],
         },
         {
-          id: 'brands',
-          name: 'Brands',
+          id: 'head gear',
+          name: 'Head Gear',
           items: [
-            { name: 'Re-Arranged', href: '#' },
-            { name: 'Counterfeit', href: '#' },
-            { name: 'Full Nelson', href: '#' },
-            { name: 'My Way', href: '#' },
+            { name: 'Helms', href: '#' },
+            { name: 'Caps', href: '#' },
+            { name: 'Masks', href: '#'},
+            { name: 'Earrings', href: '#' },
+            { name: 'Other', href: '#' },
+            { name: 'Browse All', href: '#' },
           ],
         },
       ],
@@ -287,9 +286,9 @@ export default function Example() {
       </Transition.Root>
 
       <header className="relative bg-white">
-        <p className="bg-indigo-600 h-10 flex items-center justify-center text-sm font-medium text-white px-4 sm:px-6 lg:px-8">
+        {/* <p className="bg-indigo-600 h-10 flex items-center justify-center text-sm font-medium text-white px-4 sm:px-6 lg:px-8">
           Get free delivery on orders over $100
-        </p>
+        </p> */}
 
         <nav aria-label="Top" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-b border-gray-200">
