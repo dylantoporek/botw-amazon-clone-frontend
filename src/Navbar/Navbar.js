@@ -40,7 +40,7 @@ const navigation = {
       ],
       sections: [
         {
-          id: 'one-handed',
+          id: 'one handed',
           name: 'One Handed',
           items: [
             { name: 'Swords', href: '#' },
@@ -52,7 +52,7 @@ const navigation = {
           ],
         },
         {
-          id: 'two-handed',
+          id: 'two handed',
           name: 'Two Handed',
           items: [
             { name: 'Swords', href: '#' },
@@ -129,6 +129,37 @@ const navigation = {
         },
       ],
     },
+    {
+        id: 'shields',
+        name: 'Shields',
+        featured: [
+          {
+            name: 'New Arrivals',
+            href: '#',
+            imageSrc: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/6/67/BotW_Forest_Dweller%27s_Shield_Model.png',
+            imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
+          },
+          {
+            name: 'Best Rated',
+            href: '#',
+            imageSrc: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/0/06/BotW_Hylian_Shield_Icon.png',
+            imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
+          },
+        ],
+        sections: [
+          {
+            id: 'material',
+            name: 'Material',
+            items: [
+              { name: 'Metal', href: '#' },
+              { name: 'Wooden', href: '#' },
+              { name: 'Ancient', href: '#' },
+              { name: 'Other', href: '#' },
+              { name: 'Browse All', href: '#' },
+            ],
+          },
+        ],
+      },
   ],
   pages: [
     { name: 'Company', href: '#' },
@@ -414,6 +445,13 @@ export default function Example() {
                 </div>
               </Popover.Group>
 
+                {/* search input */}
+                <div className="ml-auto flex items-center">
+                <div class="mt-1 relative rounded-md shadow-sm">
+                    <input type="text" name="price" id="price" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-2 pr-12 sm:text-sm font-medium border-gray-300 rounded-md" placeholder="Search" />
+                </div>
+                </div>
+
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
@@ -425,7 +463,7 @@ export default function Example() {
                   </a>
                 </div>
 
-                <div className="hidden lg:ml-8 lg:flex">
+                {/* <div className="hidden lg:ml-8 lg:flex">
                   <a href="#" className="text-gray-700 hover:text-gray-800 flex items-center">
                     <img
                       src="https://tailwindui.com/img/flags/flag-canada.svg"
@@ -435,15 +473,15 @@ export default function Example() {
                     <span className="ml-3 block text-sm font-medium">CAD</span>
                     <span className="sr-only">, change currency</span>
                   </a>
-                </div>
+                </div> */}
 
                 {/* Search */}
-                <div className="flex lg:ml-6">
+                {/* <div className="flex lg:ml-6">
                   <a href="#" className="p-2 text-gray-400 hover:text-gray-500">
                     <span className="sr-only">Search</span>
                     <SearchIcon className="w-6 h-6" aria-hidden="true" />
                   </a>
-                </div>
+                </div> */}
 
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
