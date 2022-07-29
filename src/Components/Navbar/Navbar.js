@@ -148,19 +148,19 @@ function Navbar(){
     return (
         <div className="navbar-container">
             <div className='top-navbar'>
-              <span>
+              <span id='navbar-logo'>
                 Logo
               </span>
 
-              <input className='navbar-search' type='text' />
+            <div className='navbar-search-container'>
+            <input className='navbar-search' type='text' />
               <button className='navbar-submit' type="submit">
                 🔍
               </button>
+            </div>
+              
 
-                
-                
-
-              <span>
+              <span id='navbar-cart'>
                 Cart
               </span>
             </div>

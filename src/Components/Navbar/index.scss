@@ -5,66 +5,101 @@
 
 ///// For Screen bigger than 1000px /////
 
-.navbar-container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    transition: all .5s ease;
+// .navbar-container{
+//     display: flex;
+//     flex-direction: column;
+//     width: 100%;
+//     justify-content: center;
+//     transition: all .5s ease;
     
-        div{
-            width: 100%;
-            display: flex;
-            flex-direction: row;
+//         div{
+//             width: 100%;
+//             display: flex;
+//             flex-direction: row;
 
-            span{
-                padding: 1em;
-                cursor: pointer;
-            }
-        }
-}
+//             span{
+//                 padding: 1em;
+//                 cursor: pointer;
+//             }
+//         }
+// }
 
 ////// For Screen less than 1000px /////
 
 @media (max-width: 1000px) { 
     .navbar-container{
-    justify-content: center;
-    align-items: center;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
 
         .top-navbar{
+            display: flex;
+            flex-direction: row;
             background-color: #000000;
             color: white;
+            justify-content: center;
             align-items: center;
             padding: 1em;
-           
-            span{
-                padding: 1em;
-                cursor: pointer;
+            transition: all .1s ease;
+            width: 100%;
+
+            #navbar-logo{
+                position: absolute;
+                left: 2em;
+
             }
 
-            .navbar-search{
-                align-self: center;
-                border-radius: .5em;
-                width: 30%;
-                height: 30px;
-                padding-left: 1em;
+            .navbar-search-container{
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                width: 50%;
                 padding-right: 1em;
+                padding-left: 1em;
+                
+                .navbar-search{
+                    align-self: center;
+                    border-radius: .5em;
+                    width: 100%;
+                    height: 30px;
+                    border: none;
+                }
+    
+                .navbar-submit{
+                    position: relative;
+                    right: 20px;
+                    top: 0px;
+                    background-color: #ff9900;
+                    border-radius: .5em;
+                    justify-self: center;
+                    align-self: center;
+                    height: 32px;
+                    border: none;
+                }
             }
 
-            .navbar-submit{
-                background-color: #ff9900;
-                border-radius: 20%;
-                justify-self: center;
-                height: 36px;
+            
+
+            #navbar-cart{
+                position: absolute;
+                right: 2em;
             }
         }
 
         .bottom-navbar{
+            display: flex;
             background-color: #232f3e;
             color: white;
+            align-content: center;
+            justify-content: center;
+            padding: .5em;
 
             span{
-                padding: 1em;
+                padding-left: 2em;
+                padding-right: 2em;
                 cursor: pointer;
             }
         }
