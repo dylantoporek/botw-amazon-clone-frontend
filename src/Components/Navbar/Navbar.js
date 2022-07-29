@@ -147,7 +147,7 @@ function Navbar(){
 
     return (
         <div className="navbar-container">
-            <div className='top-navbar'>
+          <div className='top-navbar'>
               <span id='navbar-logo'>
                 Logo
               </span>
@@ -159,11 +159,10 @@ function Navbar(){
               </button>
             </div>
               
-
               <span id='navbar-cart'>
                 Cart
               </span>
-            </div>
+          </div>
             <div className='bottom-navbar'>
             {navigation.categories.map((category)=> {
                 return <span>{category.name}</span>

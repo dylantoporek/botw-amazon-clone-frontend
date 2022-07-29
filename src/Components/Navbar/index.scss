@@ -77,6 +77,7 @@
                     justify-self: center;
                     align-self: center;
                     height: 32px;
+                    width: 32px;
                     border: none;
                 }
             }
@@ -96,10 +97,9 @@
             align-content: center;
             justify-content: center;
             padding: .5em;
+            gap: 15%;
 
             span{
-                padding-left: 2em;
-                padding-right: 2em;
                 cursor: pointer;
             }
         }
