@@ -147,13 +147,28 @@ function Navbar(){
 
     return (
         <div className="navbar-container">
-            <div>
+            <div className='top-navbar'>
+              <span>
                 Logo
+              </span>
+
+              <input className='navbar-search' type='text' />
+              <button className='navbar-submit' type="submit">
+                🔍
+              </button>
+
+                
+                
+
+              <span>
+                Cart
+              </span>
             </div>
+            <div className='bottom-navbar'>
             {navigation.categories.map((category)=> {
-                return <div>{category.name}</div>
+                return <span>{category.name}</span>
             })}
-            
+            </div>
         </div>
     )
 }

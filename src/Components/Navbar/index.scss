@@ -1,5 +1,73 @@
+@import 'animate.css';
+
+////// Style Variables //////
+
+
+///// For Screen bigger than 1000px /////
+
 .navbar-container{
     display: flex;
+    flex-direction: column;
     width: 100%;
     justify-content: center;
+    transition: all .5s ease;
+    
+        div{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+
+            span{
+                padding: 1em;
+                cursor: pointer;
+            }
+        }
+}
+
+////// For Screen less than 1000px /////
+
+@media (max-width: 1000px) { 
+    .navbar-container{
+    justify-content: center;
+    align-items: center;
+
+        .top-navbar{
+            background-color: #000000;
+            color: white;
+            align-items: center;
+            padding: 1em;
+           
+            span{
+                padding: 1em;
+                cursor: pointer;
+            }
+
+            .navbar-search{
+                align-self: center;
+                border-radius: .5em;
+                width: 30%;
+                height: 30px;
+                padding-left: 1em;
+                padding-right: 1em;
+            }
+
+            .navbar-submit{
+                background-color: #ff9900;
+                border-radius: 20%;
+                justify-self: center;
+                height: 36px;
+            }
+        }
+
+        .bottom-navbar{
+            background-color: #232f3e;
+            color: white;
+
+            span{
+                padding: 1em;
+                cursor: pointer;
+            }
+        }
+
+    }
 }
