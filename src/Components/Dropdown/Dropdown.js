@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import '../Dropdown/index.scss'
 
 function Dropdown({navigation, navbarIsSelected}){
     
@@ -11,12 +12,12 @@ let dropDownTarget = navigation.categories.filter((category)=>{
     })
     console.log(dropDownTarget)
     return (
-        <div>
+        <div className="drop-down-container">
             {dropDownTarget ?
-            <div>
+            <div className="drop-down-row">
                {dropDownTarget[0].sections.map((section) =>{ 
                return( 
-                <div>
+                <div className='drop-down-column'>
                     <span>{section.name}</span>
                     {section.items.map((item)=>{
                         return <span>{item.name}</span>

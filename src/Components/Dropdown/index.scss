@@ -1,0 +1,18 @@
+.drop-down-container{
+    margin: 1em;
+    
+    .drop-down-row{
+        display: flex;
+        flex-direction: row;
+        gap: 3em;
+        transition: all .5s ease;
+    
+        .drop-down-column{
+            display: flex;
+            flex-direction: column;
+            padding: 1em;
+            border: solid black;
+            transition: all .5s ease;
+        }
+    } 
+}
