@@ -1,9 +1,41 @@
 import React, {useState} from "react";
 
-function Dropdown(){
+function Dropdown({navigation, navbarIsSelected}){
+    
+let dropDownTarget = navigation.categories.filter((category)=>{
+        if (category.id === navbarIsSelected){
+            return category
+        } else {
+            return null
+        }
+    })
+    console.log(dropDownTarget)
     return (
         <div>
-            Hi from DropDown
+            {dropDownTarget ?
+            <div>
+               {dropDownTarget[0].sections.map((section) =>{ 
+               return( 
+                <div>
+                    <span>{section.name}</span>
+                    {section.items.map((item)=>{
+                        return <span>{item.name}</span>
+                    })}
+                </div>
+               )
+               })}
+
+               {dropDownTarget[0].featured.map((feature) =>{
+                return (
+                    <div>
+                        <span>{feature.name}</span>
+                        <img src={feature.imageSrc}/>
+                    </div>
+                )
+               })}
+            </div> 
+             :
+            null}
         </div>
     )
 }

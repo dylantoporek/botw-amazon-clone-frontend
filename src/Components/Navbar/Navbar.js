@@ -14,13 +14,13 @@ function Navbar(){
               {
                 name: 'New Arrivals',
                 href: '#',
-                imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg',
+                imageSrc: '',
                 imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
               },
               {
                 name: 'Top Rated',
                 href: '#',
-                imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
+                imageSrc: '',
                 imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
               },
             ],
@@ -149,7 +149,13 @@ function Navbar(){
     }
 
     function handleNavbarClick(e){
-      console.log(e.target.innerText)
+      // toggle drop down menu in navbar when bottom nav is clicked hidden with logo / cart click
+      if (e.target.id === 'weapons' || e.target.id === 'armor' || e.target.id === 'shields'){
+        setNavbarIsSelected(e.target.id)
+      } else {
+        setNavbarIsSelected(null)
+      }
+      
     }
 
     return (
@@ -170,11 +176,16 @@ function Navbar(){
                 Cart
               </span>
           </div>
-            <div className='bottom-navbar'>
-            {navigation.categories.map((category)=> {
-                return <span onClick={handleNavbarClick}>{category.name}</span>
-            })}
-            </div>
+          <div className='bottom-navbar'>
+          {navigation.categories.map((category)=> {
+              return <span id={category.id} onClick={handleNavbarClick}>{category.name}</span>
+          })}
+          </div>
+
+          <div>
+            {navbarIsSelected ? 
+            <Dropdown navigation={navigation} navbarIsSelected={navbarIsSelected}/> : null}
+          </div>
         </div>
     )
 }
