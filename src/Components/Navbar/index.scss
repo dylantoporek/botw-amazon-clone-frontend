@@ -25,6 +25,16 @@
             transition: all .1s ease;
             width: 100%;
 
+            span{
+                cursor: pointer;
+                border: transparent white;
+
+                &:hover{
+                    border-style: solid;
+                    margin: -2px;
+                }
+            }
+
             #navbar-logo{
                 position: absolute;
                 left: 2em;
@@ -78,6 +88,12 @@
 
             span{
                 cursor: pointer;
+                border: transparent white;
+
+                &:hover{
+                    border-style: solid;
+                    margin: -2px;
+                }
             }
         }
 
@@ -108,6 +124,16 @@
             transition: all .1s ease;
             width: 100%;
 
+            span{
+                cursor: pointer;
+                border: transparent white;
+
+                &:hover{
+                    border-style: solid;
+                    margin: -2px;
+                }
+            }
+
             #navbar-logo{
                 position: absolute;
                 left: 2em;
@@ -161,6 +187,13 @@
 
             span{
                 cursor: pointer;
+                border: transparent white;
+
+                &:hover{
+                    border-style: solid;
+                    margin: -2px;
+                }
+
             }
         }
 

@@ -1,7 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
+import Dropdown from "../Dropdown/Dropdown";
 import './index.scss'
 
 function Navbar(){
+  const [navbarIsSelected, setNavbarIsSelected] = useState(null)
+
     const navigation = {
         categories: [
           {
@@ -145,10 +148,14 @@ function Navbar(){
         ],
     }
 
+    function handleNavbarClick(e){
+      console.log(e.target.innerText)
+    }
+
     return (
         <div className="navbar-container">
           <div className='top-navbar'>
-              <span id='navbar-logo'>
+              <span id='navbar-logo' onClick={handleNavbarClick}>
                 Logo
               </span>
 
@@ -159,13 +166,13 @@ function Navbar(){
               </button>
             </div>
               
-              <span id='navbar-cart'>
+              <span id='navbar-cart' onClick={handleNavbarClick}>
                 Cart
               </span>
           </div>
             <div className='bottom-navbar'>
             {navigation.categories.map((category)=> {
-                return <span>{category.name}</span>
+                return <span onClick={handleNavbarClick}>{category.name}</span>
             })}
             </div>
         </div>
