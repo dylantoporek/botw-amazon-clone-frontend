@@ -10,7 +10,7 @@ let dropDownTarget = navigation.categories.filter((category)=>{
             return null
         }
     })
-    console.log(dropDownTarget)
+
     return (
         <div className="drop-down-container">
             {dropDownTarget ?

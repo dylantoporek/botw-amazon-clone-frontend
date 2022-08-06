@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Dropdown from "../Dropdown/Dropdown";
 import './index.scss'
+import search from '../../images/search.png'
 
 function Navbar(){
   const [navbarIsSelected, setNavbarIsSelected] = useState(null)
@@ -149,12 +150,20 @@ function Navbar(){
     }
 
     function handleNavbarClick(e){
-      // toggle drop down menu in navbar when bottom nav is clicked hidden with logo / cart click
-      if (e.target.id === 'weapons' || e.target.id === 'armor' || e.target.id === 'shields'){
-        setNavbarIsSelected(e.target.id)
-      } else {
+      console.log(e.target.id)
+      console.log(navbarIsSelected)
+      if (navbarIsSelected === e.target.id){
         setNavbarIsSelected(null)
+      } else {
+        if (e.target.id === 'weapons' || e.target.id === 'armor' || e.target.id === 'shields'){
+          setNavbarIsSelected(e.target.id)
+        } else {
+          setNavbarIsSelected(null)
+        } 
       }
+      
+      
+      
       
     }
 
@@ -167,9 +176,8 @@ function Navbar(){
 
             <div className='navbar-search-container'>
             <input className='navbar-search' type='text' />
-              <button className='navbar-submit' type="submit">
-                🔍
-              </button>
+              <img className='navbar-submit' src={search} type="submit"/>
+                
             </div>
               
               <span id='navbar-cart' onClick={handleNavbarClick}>
