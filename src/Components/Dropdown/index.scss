@@ -1,6 +1,7 @@
 #drop-down-container{
     padding: 1em;
     border-bottom: 2px solid grey;
+    z-index: 0;
     
     .drop-down-row{
         display: flex;
