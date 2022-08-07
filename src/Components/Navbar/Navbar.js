@@ -164,7 +164,7 @@ function Navbar(){
           setTimeout(()=>{
             let target = document.getElementById('drop-down-container')
             target.className = "animate__animated animate__fadeInDown"
-          }, 0)
+          }, .1)
         } else {
           let target = document.getElementById('drop-down-container')
           target.className = "animate__animated animate__fadeOutUp animate__fast"

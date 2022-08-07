@@ -3,8 +3,8 @@ import '../Dropdown/index.scss'
 import 'animate.css'
 
 function Dropdown({navigation, navbarIsSelected}){
-    
-let dropDownTarget = navigation.categories.filter((category)=>{
+
+    let dropDownTarget = navigation.categories.filter((category)=>{
         if (category.id === navbarIsSelected){
             return category
         } else {
@@ -12,6 +12,9 @@ let dropDownTarget = navigation.categories.filter((category)=>{
         }
     })
 
+    if (dropDownTarget){
+
+    
     return (
         <div id='drop-down-container'>
             {dropDownTarget ?
@@ -40,6 +43,11 @@ let dropDownTarget = navigation.categories.filter((category)=>{
             <div></div>}
         </div>
     )
+    } else {
+        return (
+            <div id='drop-down-container'></div>
+        )
+    }
 
 }
 
