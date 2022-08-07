@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import Dropdown from "../Dropdown/Dropdown";
 import './index.scss'
 import search from '../../images/search.png'
+import cart from '../../images/cart.png'
+import 'animate.css'
 
 function Navbar(){
   const [navbarIsSelected, setNavbarIsSelected] = useState(null)
@@ -150,15 +152,25 @@ function Navbar(){
   }
 
   function handleNavbarClick(e){
-      console.log(e.target.id)
-      console.log(navbarIsSelected)
       if (navbarIsSelected === e.target.id){
-        setNavbarIsSelected(null)
+        let target = document.getElementById('drop-down-container')
+        target.className = "animate__animated animate__slideOutUp animate__fast"
+        setTimeout(()=>{
+          setNavbarIsSelected(null)
+        }, 500)
       } else {
         if (e.target.id === 'weapons' || e.target.id === 'armor' || e.target.id === 'shields'){
           setNavbarIsSelected(e.target.id)
+          setTimeout(()=>{
+            let target = document.getElementById('drop-down-container')
+            target.className = "animate__animated animate__slideInDown"
+          }, 0)
         } else {
-          setNavbarIsSelected(null)
+          let target = document.getElementById('drop-down-container')
+          target.className = "animate__animated animate__slideOutUp animate__fast"
+          setTimeout(()=>{
+            setNavbarIsSelected(null)
+          }, 500)
         } 
       }
     }
@@ -179,7 +191,7 @@ function Navbar(){
       </div>
       <div className='bottom-navbar'>
         {navigation.categories.map((category)=> {
-          return <span id={category.id} onClick={handleNavbarClick}>{category.name}</span>
+          return <span key={category.id} id={category.id} onClick={handleNavbarClick}>{category.name}</span>
         })}
       </div>
       <div>
