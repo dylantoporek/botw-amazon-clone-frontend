@@ -151,10 +151,13 @@ function Navbar(){
     ],
   }
 
+  const animateUp = "animate__animated animate__slideOutUp animate__fast"
+  const animateDown = "animate__animated animate__slideInDown"
+
   function handleNavbarClick(e){
       if (navbarIsSelected === e.target.id){
         let target = document.getElementById('drop-down-container')
-        target.className = "animate__animated animate__fadeOutUp animate__fast"
+        target.className = animateUp
         setTimeout(()=>{
           setNavbarIsSelected(null)
         }, 500)
@@ -163,11 +166,11 @@ function Navbar(){
           setNavbarIsSelected(e.target.id)
           setTimeout(()=>{
             let target = document.getElementById('drop-down-container')
-            target.className = "animate__animated animate__fadeInDown"
+            target.className = animateDown
           }, .1)
         } else {
           let target = document.getElementById('drop-down-container')
-          target.className = "animate__animated animate__fadeOutUp animate__fast"
+          target.className = animateUp
           setTimeout(()=>{
             setNavbarIsSelected(null)
           }, 500)

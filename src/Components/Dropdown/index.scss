@@ -2,6 +2,9 @@
     padding: 1em;
     border-bottom: 2px solid grey;
     z-index: 0;
+    width: 100%;
+    overflow-x: scroll;
+    background-color: white;
     
     .drop-down-row{
         display: flex;
@@ -12,9 +15,25 @@
         .drop-down-column{
             display: flex;
             flex-direction: column;
-            padding: 1em;
-            border: solid black;
+            padding: .0em .5em;
             transition: all .5s ease;
+
+            .section{
+                font-size: larger;
+                font-weight: 900;
+                padding-bottom: .5em;
+            }
+
+            .item{
+                cursor: pointer;
+                padding: .2em 0em;
+            }
+        }
+
+        .feature{
+            font-size: larger;
+            font-weight: 900;
+            padding-bottom: .5em;
         }
     } 
 }

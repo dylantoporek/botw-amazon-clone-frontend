@@ -12,19 +12,22 @@ function Dropdown({navigation, navbarIsSelected}){
         }
     })
 
-    if (dropDownTarget){
+    useEffect(()=>{
+        let target = document.getElementById('drop-down-container')
+        console.log(target)
+    }, [])
 
-    
+    if (dropDownTarget){
     return (
-        <div id='drop-down-container'>
+        <div id='drop-down-container' className='animate__animated animate__slideInDown'>
             {dropDownTarget ?
             <div className="drop-down-row">
                {dropDownTarget[0].sections.map((section) =>{ 
                return( 
                 <div className='drop-down-column' key={section.name}>
-                    <span>{section.name}</span>
+                    <span className='section'>{section.name}</span>
                     {section.items.map((item)=>{
-                        return <span key={item.name}>{item.name}</span>
+                        return <span key={item.name} className='item'>{item.name}</span>
                     })}
                 </div>
                )
@@ -32,8 +35,8 @@ function Dropdown({navigation, navbarIsSelected}){
 
                {dropDownTarget[0].featured.map((feature) =>{
                 return (
-                    <div key={feature.name}>
-                        <span>{feature.name}</span>
+                    <div className='feature' key={feature.name}>
+                        <span className='section'>{feature.name}</span>
                         <img src={feature.imageSrc}/>
                     </div>
                 )

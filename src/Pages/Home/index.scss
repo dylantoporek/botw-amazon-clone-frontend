@@ -1,0 +1,15 @@
+.home-container{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    top: 13%;
+    z-index: 1;
+
+    #banner-container{
+        width: 100%;
+        #banner{
+            width: 100%;
+            opacity: 50%;
+        }
+    }
+}
