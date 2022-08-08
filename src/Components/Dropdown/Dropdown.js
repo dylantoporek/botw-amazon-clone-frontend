@@ -25,9 +25,9 @@ function Dropdown({navigation, navbarIsSelected}){
                {dropDownTarget[0].sections.map((section) =>{ 
                return( 
                 <div className='drop-down-column' key={section.name}>
-                    <span className='section'>{section.name}</span>
+                    <span id={section.name} className='section'>{section.name}</span>
                     {section.items.map((item)=>{
-                        return <span key={item.name} className='item'>{item.name}</span>
+                        return <span id={item.name} key={item.name} className='item'>{item.name}</span>
                     })}
                 </div>
                )

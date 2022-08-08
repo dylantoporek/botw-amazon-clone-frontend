@@ -15,7 +15,7 @@
         .drop-down-column{
             display: flex;
             flex-direction: column;
-            padding: .0em .5em;
+            padding: .0em 1em;
             transition: all .5s ease;
 
             .section{
@@ -31,9 +31,14 @@
         }
 
         .feature{
+            position: relative;
+            width: 20%;
+            left: 12em;
+            top: 15%;
             font-size: larger;
             font-weight: 900;
             padding-bottom: .5em;
+            text-align: center;
         }
     } 
 }
