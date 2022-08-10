@@ -1,8 +1,21 @@
-#banner-container{
-    width: 100%;
-
-    #banner{
+@media(min-width: 1000px){
+    #banner-container{
         width: 100%;
-        opacity: 50%;
+    
+        #banner{
+            width: 100%;
+            opacity: 50%;
+        }
+    }
+}
+
+@media(max-width: 1000px){
+    #banner-container{
+        width: 100%;
+    
+        #banner{
+            width: 1000px;
+            opacity: 50%;
+        }
     }
 }
