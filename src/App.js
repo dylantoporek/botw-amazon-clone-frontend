@@ -12,7 +12,7 @@ function App() {
   const [weapons, setWeapons] = useState({})
 
   useEffect(() => {
-    fetch('http://127.0.0.1:3000/weapons/index')
+    fetch('http://localhost:3000/weapons/index')
       .then((r) => r.json())
       .then(weapons => setWeapons(weapons))
 
