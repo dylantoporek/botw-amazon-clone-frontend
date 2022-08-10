@@ -22,11 +22,21 @@
                 font-size: larger;
                 font-weight: 900;
                 padding-bottom: .5em;
+                cursor: pointer;
+
+                &:hover{
+                    text-decoration: underline;
+                }
             }
 
             .item{
                 cursor: pointer;
                 padding: .2em 0em;
+                
+                &:hover{
+                    text-decoration: underline; 
+                }
+                
             }
         }
 
