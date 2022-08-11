@@ -2,7 +2,11 @@ import React, {useState, useEffect} from "react";
 import '../Dropdown/index.scss'
 import 'animate.css'
 
+
+
 function Dropdown({navigation, navbarIsSelected}){
+
+
 
     let dropDownTarget = navigation.categories.filter((category)=>{
         if (category.id === navbarIsSelected){
@@ -11,11 +15,7 @@ function Dropdown({navigation, navbarIsSelected}){
             return null
         }
     })
-
-    useEffect(()=>{
-        let target = document.getElementById('drop-down-container')
-        console.log(target)
-    }, [])
+console.log(dropDownTarget)
 
     if (dropDownTarget){
     return (

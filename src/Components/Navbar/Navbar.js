@@ -1,9 +1,13 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Dropdown from "../Dropdown/Dropdown";
 import './index.scss'
 import search from '../../images/search.png'
 import cart from '../../images/cart.png'
 import 'animate.css'
+import {useSelector} from 'react-redux'
+import {
+    selectAllWeapons
+} from '../../app/Redux-Slices/weaponSlice'
 
 function Navbar(){
   const [navbarIsSelected, setNavbarIsSelected] = useState(null)
